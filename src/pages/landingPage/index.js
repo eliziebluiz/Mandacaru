@@ -3,10 +3,10 @@ import * as S from "./styles";
 import Hands from "../../assets/washing_hands.svg";
 import Logo from "../../assets/logo-name.svg";
 import LogoIcon from "../../assets/logo.svg";
-import ImgPortoAlegre from "../../assets/portalegre.svg";
-import ImgMartins from "../../assets/martins.svg";
-import ImgApodi from "../../assets/apodi.svg";
-import ImgAguaNova from "../../assets/agua-nova.svg";
+import ImgPortoAlegre from "../../assets/portalegre.png";
+import ImgMartins from "../../assets/martins.png";
+import ImgApodi from "../../assets/apodi.png";
+import ImgAguaNova from "../../assets/agua-nova.png";
 
 const ITEMSPONTOS = [
   {
