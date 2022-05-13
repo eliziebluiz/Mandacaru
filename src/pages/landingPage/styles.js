@@ -101,6 +101,23 @@ export const Adverts = styled.div`
     max-width: 30rem;
   }
 
+  @media (min-width: 1630px) {
+    justify-content: center;
+    gap: 10rem;
+    > div h3 {
+        font-size: 2rem;
+    }
+    > div p {
+        font-size: 1rem;
+    }
+    > div button {
+        padding: 1rem 2.5rem;
+    }
+    > img {
+        max-width: 35rem;
+    }
+  }
+
   @media (max-width: 1070px) {
     flex-direction: column-reverse;
     > img {
