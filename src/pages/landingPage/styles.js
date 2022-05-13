@@ -73,7 +73,7 @@ export const ContainerAdverts = styled.div`
 export const Adverts = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row" : "row-reverse")};
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
   > div h3 {
