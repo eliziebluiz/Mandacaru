@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+  <!-- <img src="./.github/app.gif" alt="Mandacaru" /> -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  &#xa0;
 
-## Available Scripts
+  <a href="https://mandacaru.vercel.app">Demo</a>
+</div>
 
-In the project directory, you can run:
+<h1 align="center">Mandacaru 🌿🌾</h1>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Status
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h4 align="center"> 
+	🚧  Mandacaru 🚀 Em Construção...  🚧
+</h4> 
 
-### `yarn test`
+<hr>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <a href="#dart-about">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requisitos</a> &#xa0; | &#xa0;
+  <!-- <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a> -->
+</p>
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :dart: Sobre ##
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto deverá desenvolver uma ferramenta tecnológica para
+promover serviços relacionados ao turismo da região do Alto
+Oeste Potiguar, seguindo metodologias de desenvolvimento ágil
+e um modelo de negócio relacionado a uma startup.
+A ferramenta deverá conter pontos turísticos principais e suas
+respectivas informações mais relevantes, relacionadas sobre, por
+exemplo, dicas de gastronomia e hospedagem locais.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## :sparkles: Funcionalidades ##
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+:heavy_check_mark: Feature 1;\
+:heavy_check_mark: Feature 2;\
+:heavy_check_mark: Feature 3;
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :rocket: Tecnologias ##
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ferramentas usadas no projeto:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [React](https://pt-br.reactjs.org/)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :white_check_mark: Requisitos ##
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com).
 
-### Code Splitting
+## :checkered_flag: Começando ##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Clone this project
+$ git clone https://github.com/eliziebluiz/mandacaru
 
-### Analyzing the Bundle Size
+# Access
+$ cd mandacaru
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Install dependencies
+$ yarn
 
-### Making a Progressive Web App
+# Run the project
+$ yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# The server will initialize in the <http://localhost:3000>
+```
 
-### Advanced Configuration
+## :memo: License ##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+&#xa0;
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="#top">Back to top</a>
