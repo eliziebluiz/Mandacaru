@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import Hands from "../../assets/washing_hands.svg";
 import Logo from "../../assets/logo-name.svg";
 import LogoIcon from "../../assets/logo.svg";
+import Search from "../../assets/search.svg";
+import LoadingImg from "../../assets/loading.gif";
 import ImgPortoAlegre from "../../assets/portalegre.png";
 import ImgMartins from "../../assets/martins.png";
 import ImgApodi from "../../assets/apodi.png";
@@ -40,6 +42,34 @@ const ITEMSPONTOS = [
 ];
 
 const LandingPage = () => {
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState(ITEMSPONTOS);
+  const [loading, setLoading] = useState(false);
+
+  const removeAccents = (str) => {
+    return str
+      ?.toLocaleLowerCase()
+      ?.normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  };
+
+  useEffect(() => {
+    console.log(ITEMSPONTOS);
+    if (search?.trim()?.length >= 3) {
+      setLoading(true);
+      setData(
+        ITEMSPONTOS.filter((item) =>
+          removeAccents(item?.title)?.includes(removeAccents(search))
+        )
+      );
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
+    } else {
+      setData(ITEMSPONTOS);
+    }
+  }, [search]);
+
   return (
     <S.Container>
       <S.ContainerPage>
@@ -54,19 +84,39 @@ const LandingPage = () => {
             <S.Button>Restaurantes</S.Button>
             <S.Button>Login</S.Button>
           </S.ContainerButtons>
+          <S.ContainerSearch>
+            <input
+              type="text"
+              placeholder="Procurar ..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <img src={Search} alt="" />
+          </S.ContainerSearch>
         </S.ContainerItems>
         <S.ContainerAdverts>
-          {React.Children.toArray(
-            ITEMSPONTOS.map((item) => (
-              <S.Adverts reverse={!(item?.id % 2 === 0)}>
-                <div>
-                  <h3>{item?.title}</h3>
-                  <p>{item?.description}</p>
-                  <button>Saiba mais</button>
-                </div>
-                <img src={item?.photo} alt="" />
-              </S.Adverts>
-            ))
+          {loading ? (
+            <S.ContainerLoading>
+              <img src={LoadingImg} alt="" />
+            </S.ContainerLoading>
+          ) : !!data.length ? (
+            React.Children.toArray(
+              data.map((item) => (
+                <S.Adverts reverse={!(item?.id % 2 === 0)}>
+                  <div>
+                    <h3>{item?.title}</h3>
+                    <p>{item?.description}</p>
+                    <button>Saiba mais</button>
+                  </div>
+                  <img src={item?.photo} alt="" />
+                </S.Adverts>
+              ))
+            )
+          ) : (
+            <S.ContainerEmpty>
+              <img src={LogoIcon} alt="" />
+              <h3>Nenhum ponto turistico foi encontrado!</h3>
+            </S.ContainerEmpty>
           )}
         </S.ContainerAdverts>
       </S.ContainerPage>
