@@ -52,6 +52,7 @@ export const ContainerItems = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 2rem;
+  align-items: center;
 
   > img {
     max-width: 20rem;
@@ -60,6 +61,34 @@ export const ContainerItems = styled.div`
   @media (max-width: 1070px) {
     flex-direction: column;
     align-items: center;
+  }
+`;
+
+export const ContainerSearch = styled.div`
+  display: flex;
+  align-items: center;
+
+  max-height: 1rem;
+  margin-left: 3rem;
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+
+  border-radius: 2rem;
+  padding: 0.875rem 2rem;
+
+  > img {
+    max-height: 1.5rem;
+  }
+
+  > input {
+    border: none;
+    width: 100%;
+  }
+
+  input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
   }
 `;
 
@@ -105,16 +134,16 @@ export const Adverts = styled.div`
     justify-content: center;
     gap: 10rem;
     > div h3 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
     > div p {
-        font-size: 1rem;
+      font-size: 1rem;
     }
     > div button {
-        padding: 1rem 2.5rem;
+      padding: 1rem 2.5rem;
     }
     > img {
-        max-width: 35rem;
+      max-width: 35rem;
     }
   }
 
@@ -134,7 +163,7 @@ export const ContainerButtons = styled.div`
 
   margin-left: 3rem;
 
-  @media(max-width: 1070px){
+  @media (max-width: 1070px) {
     display: none;
   }
 `;
@@ -148,4 +177,25 @@ export const Button = styled.button`
   border-radius: 3rem;
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   cursor: pointer;
+`;
+
+export const ContainerEmpty = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  > img {
+    max-height: 10rem;
+  }
+`;
+
+export const ContainerLoading = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  > img {
+    max-height: 10rem;
+  }
 `;
