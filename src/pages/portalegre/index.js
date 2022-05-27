@@ -249,14 +249,6 @@ const Portalegre = () => {
                 <button className="lapis">Denunciar</button>
               </div>
             </div>
-
-            <div className="wrapper">
-              <div></div>
-              <div></div>
-              <div>
-                {/* <img src={Comida} alt="comida" className="comida" /> */}
-              </div>
-            </div>
           </S.ContainerAbout>
           {loading ? (
             <S.ContainerLoading>
