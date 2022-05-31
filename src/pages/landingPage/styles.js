@@ -14,16 +14,10 @@ export const Header = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0.5rem 0rem;
+  padding: 1rem 0rem;
   padding-left: 4.375rem;
 
   background-color: #38b000;
-  color: #fff;
-  font-weight: bold;
-
-  > img {
-    margin-left: 0.5rem;
-  }
 `;
 
 export const ContainerPage = styled.div`
@@ -115,6 +109,7 @@ export const Adverts = styled.div`
   }
   > div button {
     display: flex;
+    text-decoration: none;
     margin: 1rem auto;
     background-color: #d9fd00;
     font-weight: bold;

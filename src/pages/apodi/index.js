@@ -9,8 +9,8 @@ import ImgPortoAlegre from "../../assets/portalegre.png";
 import ImgMartins from "../../assets/martins.png";
 import ImgApodi from "../../assets/apodi.png";
 import ImgPatu from "../../assets/patu.png";
-import ImgSitio from "../../assets/sitio-portalegre.png";
-import ImgMirante from "../../assets/mirante.png";
+import ImgSitio from "../../assets/apodi-1.png";
+import ImgMirante from "../../assets/apodi-2.png";
 import IconEstaciona from "../../assets/icons/estacionamento.png";
 import IconWifi from "../../assets/icons/wifi.png";
 import IconNadar from "../../assets/icons/nadar.png";
@@ -21,7 +21,7 @@ import IconNeve from "../../assets/icons/neve.png";
 import IconCama from "../../assets/icons/cama.png";
 import IconCircle from "../../assets/icons/circle.jpg";
 import IconLocalizacao from "../../assets/icons/localizacao.png";
-import Mapa from "../../assets/mapa_portalegre.png";
+import Mapa from "../../assets/mapa_apodi.png";
 
 import Modal from "react-modal";
 
@@ -62,7 +62,7 @@ const ITEMSPONTOS = [
   },
 ];
 
-const Portalegre = () => {
+const Apodi = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState(ITEMSPONTOS);
   const [loading, setLoading] = useState(false);
@@ -139,14 +139,14 @@ const Portalegre = () => {
               <div className="casa">
                 <h5>Casa de temporada</h5>
               </div>
-              <h1 className="name">Portalegre</h1>
+              <h1 className="name">Apodi</h1>
               <h5 className="description">
                 <img
                   src={IconLocalizacao}
                   alt="Iconlocalizacao"
                   className="iconLocaliza"
                 />
-                Sítio bonsucesso, Portalegre - RN, CEP 59810-000, Brasil - {""}
+                Sítio bonsucesso, Apodi - RN, CEP 59810-000, Brasil - {""}
                 <a
                   href="https://www.google.com/maps/place/Portalegre+-+RN/@-6.0296325,-38.0205726,12z/data=!3m1!4b1!4m5!3m4!1s0x7bb281bedec5301:0x1b6b19b5bfae9e76!8m2!3d-6.0226536!4d-37.9868993"
                   className="links"
@@ -158,8 +158,9 @@ const Portalegre = () => {
             </div>
             <div>
               <h2 className="title">
-                O Recanto Alto da Serra oferece restaurante, piscina ao ar
-                livre, bar e jardim em Portalegre.
+                O Hotel Chapadão da Canastra é diferente de tudo
+                <br /> o que você já conhece! Está entre o rural e o urbano,
+                estrutura de hotel e aconchego de pousada.
               </h2>
               <img src={ImgMirante} alt="mirante" className="mirante" />
             </div>
@@ -170,15 +171,15 @@ const Portalegre = () => {
             </div>
             <div className="wrapper">
               <div>
-                <span className="nota">5,0</span>
+                <span className="nota">4,0</span>
                 <img src={IconCircle} alt="circle" className="circle" />
                 <img src={IconCircle} alt="circle" className="circle" />
                 <img src={IconCircle} alt="circle" className="circle" />
                 <img src={IconCircle} alt="circle" className="circle" />
                 <img src={IconCircle} alt="circle" className="circle" />
-                <span className="avalia">7 avaliações</span>
+                <span className="avalia">16 avaliações</span>
                 <div>
-                  <span className="subtitle">#1 de 2 em Portalegre</span>
+                  <span className="subtitle">#2 de 2 em Apodi</span>
                 </div>
                 <br></br>
                 <div className="sub">
@@ -200,14 +201,9 @@ const Portalegre = () => {
                 </div>
                 <br></br>
                 <div className="text">
-                  A Pousada Recanto Alto da Serra se lança como uma das
-                  principais opções de hospedagem da região Alto Oeste do RN.
-                  Trata-se de um empreendimento portalegrense já reconhecido
-                  pela Gastronomia e que agora desponta na arte da
-                  hospitalidade, bem recebendo seus visitantes. O proprietário,
-                  que também é Chef do Restaurante, cuida pessoalmente de todos
-                  os detalhes, inclusive do café da manhã, servido entre 7:30 às
-                  9:30. Recebemos sua visita de quarta a domingo!
+                  Localizado em Apodi, o Hotel Chapadão disponibiliza um salão
+                  partilhado e um jardim. Com serviço de quartos, esta
+                  propriedade também providencia um terraço para banhos de sol.
                 </div>
               </div>
               <div>
@@ -282,7 +278,6 @@ const Portalegre = () => {
                 <br></br>
                 <button className="acao">Faça uma avaliação</button>
                 <span className="separar">ou</span>
-
                 <button className="lapis" onClick={handleOpenModal}>
                   Denunciar
                 </button>
@@ -343,4 +338,4 @@ const Portalegre = () => {
   );
 };
 
-export default Portalegre;
+export default Apodi;
