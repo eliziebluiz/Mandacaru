@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import * as S from "./styles";
-import Hands from "../../assets/washing_hands.svg";
 import Logo from "../../assets/logo-name.svg";
 import LogoIcon from "../../assets/logo.svg";
 import Search from "../../assets/search.svg";
@@ -8,7 +8,7 @@ import LoadingImg from "../../assets/loading.gif";
 import ImgPortoAlegre from "../../assets/portalegre.png";
 import ImgMartins from "../../assets/martins.png";
 import ImgApodi from "../../assets/apodi.png";
-import ImgAguaNova from "../../assets/agua-nova.png";
+import ImgPatu from "../../assets/patu.png";
 
 const ITEMSPONTOS = [
   {
@@ -17,6 +17,7 @@ const ITEMSPONTOS = [
     description:
       "Portalegre é um dos nossos paraísos serranos. A cidade é conhecida pelas belas paisagens, pousadas charmosas, ótima gastronomia, além da receptividade e hospitalidade do seu povo. Localiza-se na região do Alto Oeste potiguar, a 370 km de Natal",
     photo: ImgPortoAlegre,
+    page: "/portalegre",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const ITEMSPONTOS = [
     description:
       "Martins Rio Grande do Norte é uma das principais cidades do interior do Estado Potiguar,  e aqui a falta de praias não deixa nada a desejar  aos visitantes, pois o município é  reflexo de atrativos naturais que incluem cachoeiras,sítio arqueológicos e mata preservada.Quer saber o que mais você encontra por aqui?",
     photo: ImgMartins,
+    page: "/martins",
   },
   {
     id: 3,
@@ -31,13 +33,15 @@ const ITEMSPONTOS = [
     description:
       "Localizada a 420 Km da capital Natal, Apodi é conhecida por ser o município que reserva um dos principais sítios arqueológicos do Brasil para visitação. O sítio, localizado no Distrito de Soledade, e que leva o nome Lajedo de Soledade, tem mais de 5 mil anos e é um dos 5 sítios arqueológicos dentre os 300 que existem no país que recebem visitas regulares.",
     photo: ImgApodi,
+    page: "/apodi",
   },
   {
     id: 4,
-    title: "Água Nova",
+    title: "Patu",
     description:
-      "Água Nova é um município brasileiro no interior do estado do Rio Grande do Norte. Sua origem está ligada à existência de um bebedouro construído às margens do riacho do Meio, na serra do Bom Será, com água considerada de boa qualidade, atraindo os moradores que moravam nas redondezas.",
-    photo: ImgAguaNova,
+      "Patu se destaca por seu grande potencial turístico em vários segmentos: religioso, cultural, ecológico e também o turismo de aventura. Unindo-se a tudo isso, podemos destacar o seu povo vibrante e hospitaleiro, a sua típica culinária e o seu rico artesanato que reforçam a base da potencial turístico.",
+    photo: ImgPatu,
+    page: "/patu",
   },
 ];
 
@@ -73,16 +77,16 @@ const LandingPage = () => {
   return (
     <S.Container>
       <S.ContainerPage>
-        <S.Header>
-          Acessibilidade: <img src={Hands} alt="" />
-        </S.Header>
+        <S.Header></S.Header>
         <S.ContainerItems>
           <img src={Logo} alt="" />
           <S.ContainerButtons>
+            <Link to="/">
+              <S.Button>Inicio</S.Button>
+            </Link>
             <S.Button>Guia</S.Button>
             <S.Button>Hotéis</S.Button>
             <S.Button>Restaurantes</S.Button>
-            <S.Button>Login</S.Button>
           </S.ContainerButtons>
           <S.ContainerSearch>
             <input
@@ -106,7 +110,9 @@ const LandingPage = () => {
                   <div>
                     <h3>{item?.title}</h3>
                     <p>{item?.description}</p>
-                    <button>Saiba mais</button>
+                    <Link to={item?.page} style={{ textDecoration: "none" }}>
+                      <button>Saiba mais</button>
+                    </Link>
                   </div>
                   <img src={item?.photo} alt="" />
                 </S.Adverts>

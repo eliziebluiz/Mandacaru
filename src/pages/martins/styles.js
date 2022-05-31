@@ -204,6 +204,11 @@ export const ContainerLanding = styled.div`
   padding: 0rem 3.25rem;
   gap: 2rem;
 
+  .links {
+    text-decoration: none;
+    color: #2e8fd5;
+  }
+
   .description {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -235,11 +240,6 @@ export const ContainerLanding = styled.div`
   .iconLocaliza {
     width: 30px;
     height: 25px;
-  }
-
-  .links {
-    text-decoration: none;
-    color: #2e8fd5;
   }
 
   @media (max-width: 1070px) {
