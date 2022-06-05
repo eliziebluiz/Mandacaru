@@ -13,6 +13,9 @@ import ImgApodi from "../../assets/apodi.png";
 import ImgPatu from "../../assets/patu.png";
 import ImgEncanto from "../../assets/encanto.svg";
 import Portalegre_Bica from "../../assets/portalegre_bica.svg";
+import Pedra_do_inferno from "../../assets/pedra-do-inferno.png";
+import Martins_mirante from "../../assets/martins-mirante.png";
+
 import cuscuz_potiguar from "../../assets/cuscuz-potiguar.png";
 import buchada from "../../assets/buchada.png";
 import baiao from "../../assets/baiao.png";
@@ -152,7 +155,11 @@ const LandingPage = () => {
             <Carousel itemsToShow={1} pagination={false}>
               <S.Item>
                 <div>
-                  <img src={Portalegre_Bica} alt="" />
+                  <img
+                    className="img-ponto-turistico"
+                    src={Portalegre_Bica}
+                    alt=""
+                  />
                 </div>
                 <div>
                   <h3 className="titles">A Bica</h3>
@@ -163,8 +170,38 @@ const LandingPage = () => {
                   </span>
                 </div>
               </S.Item>
-              <S.Item>2</S.Item>
-              <S.Item>3</S.Item>
+              <S.Item>
+                <div>
+                  <img
+                    className="img-ponto-turistico"
+                    src={Pedra_do_inferno}
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 className="titles">Pedra do Inferno</h3>
+                  <span className="description">
+                    Localizado na rual AUmirante Cachorrinho, número 666, Bairro
+                    Infernal, ao lado do quiosque do Satanás.
+                  </span>
+                </div>
+              </S.Item>
+              <S.Item>
+                <div>
+                  <img
+                    className="img-ponto-turistico"
+                    src={Martins_mirante}
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 className="titles">Pedra do Inferno</h3>
+                  <span className="description">
+                    Localizado na rual A Umirante Cachorrinho, número 666,
+                    Bairro Infernal, ao lado do quiosque do Satanás.
+                  </span>
+                </div>
+              </S.Item>
             </Carousel>
           </div>
           <S.TitleCities>
