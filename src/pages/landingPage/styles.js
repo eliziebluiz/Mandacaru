@@ -9,6 +9,123 @@ export const Container = styled.div`
   justify-content: space-between;
   overflow-x: hidden;
   overflow-y: scroll;
+
+  .container-center {
+    display: flex;
+    margin: 0 auto;
+    padding: 0rem 6.25rem;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .description {
+    font-size: 15px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+  }
+
+  .name {
+    color: #457d2b;
+  }
+
+  .mirante {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  .title {
+    text-align: center;
+    width: 40rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    /* color: #ffff; */
+    color: #38b000;
+    border-left: solid #0071c2;
+  }
+
+  .iconLocaliza {
+    width: 30px;
+    height: 25px;
+  }
+
+  .links {
+    text-decoration: none;
+    color: #2e8fd5;
+  }
+
+  //style carrousel
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px black;
+  }
+
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+
+  .rec.rec-arrow {
+    background-color: #38b000;
+    color: #ffffff;
+  }
+  //
+
+  //style cards
+  main.cards {
+    display: flex;
+  }
+
+  main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  main.cards section.card:first-child {
+    margin-left: 0;
+  }
+
+  main.cards section.card img {
+    width: 100%;
+  }
+
+  main.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+  }
+
+  main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+  }
+
+  main.cards section.card.contact {
+    box-shadow: 10px 20px 30px -30px #000000;
+  }
+
+  //
+
+  @media (max-width: 1070px) {
+    flex-direction: column;
+    align-items: center;
+    .title {
+      border-left: none;
+    }
+
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `;
 
 export const Header = styled.div`
@@ -267,4 +384,24 @@ export const ContainerBoxSearch = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+`;
+
+export const Item = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 300px;
+  width: 90%;
+  color: #000000;
+
+  .titles {
+    margin-left: 10rem;
+    margin-top: 5rem;
+  }
+
+  .description {
+    font-size: 15px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 20%;
+  }
 `;

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Carousel from "react-elastic-carousel";
+
 import * as S from "./styles";
 import Logo from "../../assets/logo-name.svg";
 import LogoIcon from "../../assets/logo-icon.svg";
@@ -10,6 +12,10 @@ import ImgMartins from "../../assets/martins.png";
 import ImgApodi from "../../assets/apodi.png";
 import ImgPatu from "../../assets/patu.png";
 import ImgEncanto from "../../assets/encanto.svg";
+import Portalegre_Bica from "../../assets/portalegre_bica.svg";
+import cuscuz_potiguar from "../../assets/cuscuz-potiguar.png";
+import buchada from "../../assets/buchada.png";
+import baiao from "../../assets/baiao.png";
 
 const ITEMSPONTOS = [
   {
@@ -140,11 +146,52 @@ const LandingPage = () => {
             )}
           </S.ContainerAdverts>
           <S.TitleCities>
-            <p>Alguns pontos turísticos - Carrosel</p>
+            <p>Alguns pontos turísticos</p>
           </S.TitleCities>
+          <div className="carousel-wrapper">
+            <Carousel itemsToShow={1} pagination={false}>
+              <S.Item>
+                <div>
+                  <img src={Portalegre_Bica} alt="" />
+                </div>
+                <div>
+                  <h3 className="titles">A Bica</h3>
+                  <span className="description">
+                    É uma área de conservação ambiental, com trechos de mata
+                    intocada, e possui seis nascentes de água mineral pura e
+                    cristalina.
+                  </span>
+                </div>
+              </S.Item>
+              <S.Item>2</S.Item>
+              <S.Item>3</S.Item>
+            </Carousel>
+          </div>
           <S.TitleCities>
             <p>Alguns pratos típicos</p>
           </S.TitleCities>
+          <div className="container-center">
+            <main class="cards">
+              <section class="card contact">
+                <div class="icon">
+                  <img src={cuscuz_potiguar} alt="Contact us." />
+                </div>
+                <h3>Cuscuz Potiguar</h3>
+              </section>
+              <section class="card contact">
+                <div class="icon">
+                  <img src={buchada} alt="Shop here." />
+                </div>
+                <h3>Buchada</h3>
+              </section>
+              <section class="card contact">
+                <div class="icon">
+                  <img src={baiao} alt="About us." />
+                </div>
+                <h3>Baião</h3>
+              </section>
+            </main>
+          </div>
         </S.ContainerPage>
         <S.Footer>
           <div className="container-footer">
