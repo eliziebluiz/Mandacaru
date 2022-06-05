@@ -404,4 +404,7 @@ export const Item = styled.div`
     margin-left: 10%;
     margin-right: 20%;
   }
+  .img-ponto-turistico {
+    max-width: 40rem;
+  }
 `;
