@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styles";
 import Logo from "../../assets/logo-name.svg";
-import LogoIcon from "../../assets/logo.svg";
+import LogoIcon from "../../assets/logo-icon.svg";
 import Search from "../../assets/search.svg";
 import LoadingImg from "../../assets/loading.gif";
 import ImgPortoAlegre from "../../assets/portalegre.png";
 import ImgMartins from "../../assets/martins.png";
 import ImgApodi from "../../assets/apodi.png";
 import ImgPatu from "../../assets/patu.png";
+import ImgEncanto from "../../assets/encanto.svg";
 
 const ITEMSPONTOS = [
   {
@@ -43,6 +44,14 @@ const ITEMSPONTOS = [
     photo: ImgPatu,
     page: "/patu",
   },
+  {
+    id: 5,
+    title: "Encanto",
+    description:
+      "Encanto é um município brasileiro no interior do estado do Rio Grande do Norte. Ele se localiza a oeste da capital do estado e ocupa uma área de aproximadamente 126 km².",
+    photo: ImgEncanto,
+    page: "/encanto",
+  },
 ];
 
 const LandingPage = () => {
@@ -58,7 +67,6 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
-    console.log(ITEMSPONTOS);
     if (search?.trim()?.length >= 3) {
       setLoading(true);
       setData(
@@ -75,61 +83,102 @@ const LandingPage = () => {
   }, [search]);
 
   return (
-    <S.Container>
-      <S.ContainerPage>
-        <S.Header></S.Header>
-        <S.ContainerItems>
-          <img src={Logo} alt="" />
-          <S.ContainerButtons>
-            <Link to="/">
-              <S.Button>Inicio</S.Button>
-            </Link>
-            <S.Button>Guia</S.Button>
-            <S.Button>Hotéis</S.Button>
-            <S.Button>Restaurantes</S.Button>
-          </S.ContainerButtons>
-          <S.ContainerSearch>
-            <input
-              type="text"
-              placeholder="Procurar ..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <img src={Search} alt="" />
-          </S.ContainerSearch>
-        </S.ContainerItems>
-        <S.ContainerAdverts>
-          {loading ? (
-            <S.ContainerLoading>
-              <img src={LoadingImg} alt="" />
-            </S.ContainerLoading>
-          ) : !!data.length ? (
-            React.Children.toArray(
-              data.map((item) => (
-                <S.Adverts reverse={!(item?.id % 2 === 0)}>
-                  <div>
-                    <h3>{item?.title}</h3>
-                    <p>{item?.description}</p>
-                    <Link to={item?.page} style={{ textDecoration: "none" }}>
-                      <button>Saiba mais</button>
-                    </Link>
-                  </div>
-                  <img src={item?.photo} alt="" />
-                </S.Adverts>
-              ))
-            )
-          ) : (
-            <S.ContainerEmpty>
+    <S.Container100vw>
+      <S.Container>
+        <S.ContainerPage>
+          <S.Header>
+            <S.ContainerLogo>
+              <img src={Logo} alt="" />
+            </S.ContainerLogo>
+            <S.ContainerBoxSearch>
+              <S.ContainerItems>
+                <h3>Bem Vindo ao Alto Oeste</h3>
+                <p>
+                  Aqui você encontra tudo e mais um pouco sobre essa linda
+                  região...
+                </p>
+                <S.ContainerSearch>
+                  <input
+                    type="text"
+                    placeholder="Busque aqui o seu próximo destino..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                  <img src={Search} alt="" />
+                </S.ContainerSearch>
+              </S.ContainerItems>
+            </S.ContainerBoxSearch>
+          </S.Header>
+          <S.TitleCities>
+            <p>Principais cidades do Alto Oeste</p>
+          </S.TitleCities>
+          <S.ContainerAdverts>
+            {loading ? (
+              <S.ContainerLoading>
+                <img src={LoadingImg} alt="" />
+              </S.ContainerLoading>
+            ) : !!data.length ? (
+              React.Children.toArray(
+                data.map((item) => (
+                  <S.Adverts reverse={!(item?.id % 2 === 0)}>
+                    <div>
+                      <h3>{item?.title}</h3>
+                      <p>{item?.description}</p>
+                      <Link to={item?.page} style={{ textDecoration: "none" }}>
+                        <button>Saiba mais</button>
+                      </Link>
+                    </div>
+                    <img src={item?.photo} alt="" />
+                  </S.Adverts>
+                ))
+              )
+            ) : (
+              <S.ContainerEmpty>
+                <img src={LogoIcon} alt="" />
+                <h3>Nenhum ponto turistico foi encontrado!</h3>
+              </S.ContainerEmpty>
+            )}
+          </S.ContainerAdverts>
+          <S.TitleCities>
+            <p>Alguns pontos turísticos - Carrosel</p>
+          </S.TitleCities>
+          <S.TitleCities>
+            <p>Alguns pratos típicos</p>
+          </S.TitleCities>
+        </S.ContainerPage>
+        <S.Footer>
+          <div className="container-footer">
+            <div>
               <img src={LogoIcon} alt="" />
-              <h3>Nenhum ponto turistico foi encontrado!</h3>
-            </S.ContainerEmpty>
-          )}
-        </S.ContainerAdverts>
-      </S.ContainerPage>
-      <S.Footer>
-        <img src={LogoIcon} alt="" /> Todos os direitos reservados ©
-      </S.Footer>
-    </S.Container>
+            </div>
+            <div>
+              <strong>Guia Mandacaru</strong>
+              <p>Br 226 s/n,</p>
+              <p>Bairro São Geraldo, Pau dos ferros,</p>
+              <p>Rio Grande do Norte, Brasil</p>
+              <p>
+                <strong>Tel:</strong> +55 84 99999-9999
+              </p>
+              <p>
+                <strong>Email:</strong> mandacaru@ufersa.com
+              </p>
+            </div>
+            <div>
+              <strong>Cidades</strong>
+              <p>Portalegre</p>
+              <p>Martins</p>
+              <p>Apodi</p>
+              <p>Patu</p>
+            </div>
+          </div>
+
+          <p>
+            Copyright© 2022. Guia turístico Mandacaru | Universidade Federal
+            Rural do Semi-Árido
+          </p>
+        </S.Footer>
+      </S.Container>
+    </S.Container100vw>
   );
 };
 
