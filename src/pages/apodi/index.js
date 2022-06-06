@@ -21,7 +21,6 @@ import IconNeve from "../../assets/icons/neve.png";
 import IconCama from "../../assets/icons/cama.png";
 import IconCircle from "../../assets/icons/circle.jpg";
 import IconLocalizacao from "../../assets/icons/localizacao.png";
-import Mapa from "../../assets/mapa_apodi.png";
 
 import Modal from "react-modal";
 
@@ -264,9 +263,7 @@ const Apodi = () => {
                   Quartos para família
                 </div>
               </div>
-              <div>
-                <img src={Mapa} alt="mapa" className="mapa" />
-              </div>
+              <div></div>
             </div>
             <br></br>
 

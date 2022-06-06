@@ -4,10 +4,16 @@ import * as S from "./styles";
 import Carousel from "react-elastic-carousel";
 import EntradaPortalegre from "../../assets/portalegre_nova.svg";
 import LogoNova from "../../assets/logo_nova.svg";
+import IconEstrela from "../../assets/estrela.svg";
 import Portalegre_Bica from "../../assets/portalegre_bica.svg";
-import Portalegre1 from "../../assets/portalegre_1.png";
-import Portalegre2 from "../../assets/portalegre_2.png";
-import Portalegre3 from "../../assets/portalegre_3.png";
+import PontoTurismo2 from "../../assets/portalegre_pinga.svg";
+import PontoTurismo3 from "../../assets/portalegre_torres.svg";
+import Hospedagem1 from "../../assets/portalegre_hospedagem_1.svg";
+import Hospedagem2 from "../../assets/portalegre_hospedagem_2.svg";
+import Hospedagem3 from "../../assets/portalegre_hospedagem_3.svg";
+import Gastronomia1 from "../../assets/portalegre_gastronomia_1.svg";
+import Gastronomia2 from "../../assets/portalegre_gastronomia_2.svg";
+import Gastronomia3 from "../../assets/portalegre_gastronomia_3.svg";
 
 const Portalegre = () => {
   return (
@@ -29,7 +35,7 @@ const Portalegre = () => {
                 Rio Grande do Norte, localizado no Polo Serrano. Área
                 territorial de 110 km².
                 <h5 className="description">
-                  A história da região onde Portalegre situa-se mescla a
+                  A história da região onde Portalegre situa-se, mescla a
                   influência entre os nativos das terras, os índios Paiacu,
                   Tarairiu, portugueses e a expansão da carne do charque.
                 </h5>
@@ -58,11 +64,47 @@ const Portalegre = () => {
                         É uma área de conservação ambiental, com trechos de mata
                         intocada, e possui seis nascentes de água mineral pura e
                         cristalina.
+                        <h5>
+                          R. Dom Jaime Camara, 18, Portalegre - RN, Brasil
+                        </h5>
                       </span>
                     </div>
                   </S.Item>
-                  <S.Item>2</S.Item>
-                  <S.Item>3</S.Item>
+                  <S.Item>
+                    <div>
+                      <img src={PontoTurismo2} alt="" />
+                    </div>
+                    <div>
+                      <h3 className="titles">Cachoeira do Pinga</h3>
+                      <span className="description">
+                        Com água pura e cristalina, considerada a única
+                        cachoeira perene do estado do Rio Grande do Norte,
+                        durante o ano todo escorre água continuamente entre as
+                        pedras, e tem 96 metros de altura.
+                        <h5>
+                          Trilha Ecológica da Cachoeira do Pinga - Portalegre -
+                          RN
+                        </h5>
+                      </span>
+                    </div>
+                  </S.Item>
+                  <S.Item>
+                    <div>
+                      <img src={PontoTurismo3} alt="" />
+                    </div>
+                    <div>
+                      <h3 className="titles">
+                        Mirante natural Torres de Portalegre
+                      </h3>
+                      <span className="description">
+                        Formado por duas grandes rochas que proporcionam vistas
+                        espetaculares da região. Para chegar até o local, o
+                        turista faz um trekking de cerca de 3 km, apreciando a
+                        natureza intocada da região.
+                        <h5>Mirante Três Torres - Camping - Portalegre - RN</h5>
+                      </span>
+                    </div>
+                  </S.Item>
                 </Carousel>
               </div>
 
@@ -70,29 +112,119 @@ const Portalegre = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Portalegre1} alt="Contact us." />
+                    <img src={Hospedagem1} alt="" className="hospedagem" />
                   </div>
-                  <h3>Novotel</h3>
+                  <h3>
+                    <p>
+                      Recanto Alto da Serra
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h3>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Localizado na Rua dos Mirantes, 52, Centro, Portalegre - RN,
+                    CEP 59810-000, Brasil
                   </span>
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Portalegre2} alt="Shop here." />
+                    <img src={Hospedagem2} alt="Shop here." />
                   </div>
-                  <h3>Novotel</h3>
+                  <h3>
+                    <p>
+                      Hotel Portal da Serra
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h3>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Localizado na Rua Antonio Brito de Freitas, s/n, Portalegre
+                    - RN, 59810-000 - (84) 99945-6581
                   </span>
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Portalegre3} alt="About us." />
+                    <img src={Hospedagem3} alt="About us." />
                   </div>
-                  <h3>Novotel</h3>
+                  <h3>
+                    <p>
+                      Pousada Boa Vista
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h3>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Localizado no Terminal Turístico - Mirante Boa Vista,
+                    Portalegre, Rio Grande do Norte 59810-000 Brasil
                   </span>
                 </section>
               </main>
@@ -101,29 +233,119 @@ const Portalegre = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Portalegre1} alt="Contact us." />
+                    <img src={Gastronomia1} alt="Contact us." />
                   </div>
-                  <h3>Novotel</h3>
+                  <h3>
+                    <p>
+                      Restaurante Donana
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h3>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Localizado na Av. Hipólito Fialho, 284 - Centro, Portalegre
+                    - RN, 59810-000
                   </span>
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Portalegre2} alt="Shop here." />
+                    <img src={Gastronomia2} alt="Shop here." />
                   </div>
-                  <h3>Novotel</h3>
+                  <h3>
+                    <p>
+                      Restaurante Alto da Serra
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h3>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Localizado na Rua dos mirantes - RN-177, Portalegre - RN,
+                    59810-000
                   </span>
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Portalegre3} alt="About us." />
+                    <img src={Gastronomia3} alt="About us." />
                   </div>
-                  <h3>Novotel</h3>
+                  <h3>
+                    <p>
+                      Resenharia Restaurante
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h3>
                   <span>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Localizado na Rua dos mirantes - RN-177, Portalegre - RN,
+                    59810-000
                   </span>
                 </section>
               </main>
@@ -132,7 +354,36 @@ const Portalegre = () => {
         </S.ContainerAdverts>
       </S.ContainerPage>
       <S.Footer>
-        <img src={LogoNova} alt="" /> Todos os direitos reservados ©
+        <div className="container-footer">
+          <div>
+            <img src={LogoNova} alt="" />
+          </div>
+          <div>
+            <strong>Guia Mandacaru</strong>
+            <p>Br 226 s/n,</p>
+            <p>Bairro São Geraldo, Pau dos ferros,</p>
+            <p>Rio Grande do Norte, Brasil</p>
+            <p>
+              <strong>Tel:</strong> +55 84 99999-9999
+            </p>
+            <p>
+              <strong>Email:</strong> mandacaru@ufersa.com
+            </p>
+          </div>
+          <div>
+            <strong>Cidades</strong>
+            <p>Portalegre</p>
+            <p>Martins</p>
+            <p>Apodi</p>
+            <p>Patu</p>
+            <p>Encanto</p>
+          </div>
+        </div>
+
+        <p>
+          Copyright© 2022. Guia turístico Mandacaru | Universidade Federal Rural
+          do Semi-Árido
+        </p>
       </S.Footer>
     </S.Container>
   );
