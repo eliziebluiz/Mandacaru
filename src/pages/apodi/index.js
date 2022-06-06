@@ -1,335 +1,383 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./styles";
-import Logo from "../../assets/logo-name.svg";
-import LogoIcon from "../../assets/logo.svg";
-import Search from "../../assets/search.svg";
-import LoadingImg from "../../assets/loading.gif";
-import ImgPortoAlegre from "../../assets/portalegre.png";
-import ImgMartins from "../../assets/martins.png";
-import ImgApodi from "../../assets/apodi.png";
-import ImgPatu from "../../assets/patu.png";
-import ImgSitio from "../../assets/apodi-1.png";
-import ImgMirante from "../../assets/apodi-2.png";
-import IconEstaciona from "../../assets/icons/estacionamento.png";
-import IconWifi from "../../assets/icons/wifi.png";
-import IconNadar from "../../assets/icons/nadar.png";
-import IconBar from "../../assets/icons/bar.png";
-import IconRestaurante from "../../assets/icons/restaurante.png";
-import IconCafe from "../../assets/icons/caneca.png";
-import IconNeve from "../../assets/icons/neve.png";
-import IconCama from "../../assets/icons/cama.png";
-import IconCircle from "../../assets/icons/circle.jpg";
-import IconLocalizacao from "../../assets/icons/localizacao.png";
-
-import Modal from "react-modal";
-
-Modal.setAppElement("#root");
-
-const ITEMSPONTOS = [
-  {
-    id: 1,
-    title: "Portalegre",
-    description:
-      "Portalegre é um dos nossos paraísos serranos. A cidade é conhecida pelas belas paisagens, pousadas charmosas, ótima gastronomia, além da receptividade e hospitalidade do seu povo. Localiza-se na região do Alto Oeste potiguar, a 370 km de Natal",
-    photo: ImgPortoAlegre,
-    page: "/portalegre",
-  },
-  {
-    id: 2,
-    title: "Martins",
-    description:
-      "Martins Rio Grande do Norte é uma das principais cidades do interior do Estado Potiguar,  e aqui a falta de praias não deixa nada a desejar  aos visitantes, pois o município é  reflexo de atrativos naturais que incluem cachoeiras,sítio arqueológicos e mata preservada.Quer saber o que mais você encontra por aqui?",
-    photo: ImgMartins,
-    page: "/martins",
-  },
-  {
-    id: 3,
-    title: "Apodi",
-    description:
-      "Localizada a 420 Km da capital Natal, Apodi é conhecida por ser o município que reserva um dos principais sítios arqueológicos do Brasil para visitação. O sítio, localizado no Distrito de Soledade, e que leva o nome Lajedo de Soledade, tem mais de 5 mil anos e é um dos 5 sítios arqueológicos dentre os 300 que existem no país que recebem visitas regulares.",
-    photo: ImgApodi,
-    page: "/apodi",
-  },
-  {
-    id: 4,
-    title: "Patu",
-    description:
-      "Patu se destaca por seu grande potencial turístico em vários segmentos: religioso, cultural, ecológico e também o turismo de aventura. Unindo-se a tudo isso, podemos destacar o seu povo vibrante e hospitaleiro, a sua típica culinária e o seu rico artesanato que reforçam a base da potencial turístico.",
-    photo: ImgPatu,
-    page: "/patu",
-  },
-];
+import Carousel from "react-elastic-carousel";
+import EntradaApodi from "../../assets/apodi_entrada.svg";
+import LogoNova from "../../assets/logo_nova.svg";
+import IconEstrela from "../../assets/estrela.svg";
+import PontoTurismo1 from "../../assets/apodi_ponto1.svg";
+import PontoTurismo2 from "../../assets/apodi_ponto2.svg";
+import PontoTurismo3 from "../../assets/apodi_ponto3.svg";
+import Hospedagem1 from "../../assets/apodi_hospedagem1.svg";
+import Hospedagem2 from "../../assets/apodi_hospedagem2.svg";
+import Hospedagem3 from "../../assets/apodi_hospedagem3.svg";
+import Gastronomia1 from "../../assets/apodi_gastronomia1.svg";
+import Gastronomia2 from "../../assets/apodi_gastronomia2.svg";
+import Gastronomia3 from "../../assets/apodi_gastronomia3.svg";
 
 const Apodi = () => {
-  const [search, setSearch] = useState("");
-  const [data, setData] = useState(ITEMSPONTOS);
-  const [loading, setLoading] = useState(false);
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  function handleOpenModal() {
-    setIsOpen(true);
-  }
-
-  function handleCloseModal() {
-    setIsOpen(false);
-  }
-
-  const customStyles = {
-    content: {
-      width: "40%",
-      height: "55%",
-      left: "30%",
-      top: "15%",
-      background: "#38B00040",
-    },
-  };
-
-  const removeAccents = (str) => {
-    return str
-      ?.toLocaleLowerCase()
-      ?.normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
-  };
-
-  useEffect(() => {
-    console.log(ITEMSPONTOS);
-    if (search?.trim()?.length >= 3) {
-      setLoading(true);
-      setData(
-        ITEMSPONTOS.filter((item) =>
-          removeAccents(item?.title)?.includes(removeAccents(search))
-        )
-      );
-      setTimeout(() => {
-        setLoading(false);
-      }, 1500);
-    } else {
-      setData(ITEMSPONTOS);
-    }
-  }, [search]);
   return (
     <S.Container>
       <S.ContainerPage>
-        <S.Header></S.Header>
-        <S.ContainerItems>
-          <img src={Logo} alt="" />
-          <S.ContainerButtons>
-            <Link to="/">
-              <S.Button>Inicio</S.Button>
-            </Link>
-            <S.Button>Guia</S.Button>
-            <S.Button>Hotéis</S.Button>
-            <S.Button>Restaurantes</S.Button>
-          </S.ContainerButtons>
-          <S.ContainerSearch>
-            <input
-              type="text"
-              placeholder="Procurar ..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <img src={Search} alt="" />
-          </S.ContainerSearch>
-        </S.ContainerItems>
+        <S.Header>
+          <Link to="/">
+            <img src={LogoNova} alt="" />
+          </Link>
+          <h1>Apodi</h1>
+        </S.Header>
+        <img src={EntradaApodi} alt="" className="apodi" />
         <S.ContainerAdverts>
-          <S.ContainerLanding search={!search}>
+          <S.ContainerLanding>
             <div>
-              <div className="casa">
-                <h5>Casa de temporada</h5>
-              </div>
-              <h1 className="name">Apodi</h1>
+              <h1 className="name">Sobre a cidade</h1>
               <h5 className="description">
-                <img
-                  src={IconLocalizacao}
-                  alt="Iconlocalizacao"
-                  className="iconLocaliza"
-                />
-                Sítio bonsucesso, Apodi - RN, CEP 59810-000, Brasil - {""}
-                <a
-                  href="https://www.google.com/maps/place/Portalegre+-+RN/@-6.0296325,-38.0205726,12z/data=!3m1!4b1!4m5!3m4!1s0x7bb281bedec5301:0x1b6b19b5bfae9e76!8m2!3d-6.0226536!4d-37.9868993"
-                  className="links"
-                >
-                  Visualizar mapa
-                </a>
+                Apodi é um município brasileiro do estado do Rio Grande do
+                Norte. De acordo com a estimativa realizada pelo IBGE (Instituto
+                Brasileiro de Geografia e Estatística) em 2017, sua população é
+                de 36.323 habitantes. Área territorial de 1 602,477 km². Apodi
+                foi emancipado de Portalegre através da Resolução do Conselho
+                Geral da Província do Rio Grande em 11 de abril de 1833.
+                <h5 className="description">
+                  Apodi possui todo o seu território inserido na bacia
+                  hidrográfica do Rio Apodi-Mossoró, sendo cortado por esse rio
+                  e um de seus afluentes, o Rio Umari. O principal reservatório
+                  do município é a Barragem Santa Cruz, oficialmente Barragem
+                  Governador Aluízio Alves, com capacidade para 599 712 000 de
+                  metros cúbicos de água (m³) e o segundo maior do Rio Grande do
+                  Norte, depois da Barragem Armando Ribeiro Gonçalves, em Assu.
+                </h5>
               </h5>
-              <img src={ImgSitio} alt="Sitio BonSucesso" className="sitio" />
-            </div>
-            <div>
-              <h2 className="title">
-                O Hotel Chapadão da Canastra é diferente de tudo
-                <br /> o que você já conhece! Está entre o rural e o urbano,
-                estrutura de hotel e aconchego de pousada.
-              </h2>
-              <img src={ImgMirante} alt="mirante" className="mirante" />
+              <h1 className="name">Pontos turísticos da cidade</h1>
+              <div className="carousel-wrapper">
+                <Carousel itemsToShow={1} pagination={false}>
+                  <S.Item>
+                    <div>
+                      <img src={PontoTurismo1} alt="" />
+                    </div>
+                    <div>
+                      <h3 className="titles">
+                        Sítio Arqueológico do Lajedo de Soledade
+                      </h3>
+                      <span className="description">
+                        O sítio arqueológico por milhões de anos já foi mar e,
+                        por isso, é possível encontrar animais marinhos
+                        fossilizados na região do Lajedo, como ostras,
+                        caramujos, estrelas e ouriços-do-mar, de 90 milhões de
+                        anos.
+                        <h5>
+                          Sitio Soledade Centro do Vilarejo, Apodi, Rio Grande
+                          do Norte
+                        </h5>
+                      </span>
+                    </div>
+                  </S.Item>
+                  <S.Item>
+                    <div>
+                      <img src={PontoTurismo3} alt="" />
+                    </div>
+                    <div>
+                      <h3 className="titles">Museu do Índio Luiza Cantofa</h3>
+                      <span className="description">
+                        O Museu do Índio Luiza Cantofa surgiu da necessidade de
+                        um acervo que preserva a memória dos Índios Tapuias
+                        Paiacus, os primeiros habitantes da cidade de Apodi, O
+                        Museu contém um riquíssimo acervo de peças líticas.
+                        <h5>R. Antônio Lopes Filho, 105, Apodi - RN</h5>
+                      </span>
+                    </div>
+                  </S.Item>
+                  <S.Item>
+                    <div>
+                      <img src={PontoTurismo2} alt="" />
+                    </div>
+                    <div>
+                      <h3 className="titles">Museu de Soledade</h3>
+                      <span className="description">
+                        O acervo do museu é composto por painéis fotográficos,
+                        maquetes e utensílios de pedras usados pelos índios que
+                        habitavam a região.
+                        <h5>R. Principal, Apodi - RN</h5>
+                      </span>
+                    </div>
+                  </S.Item>
+                </Carousel>
+              </div>
+
+              <h1 className="name">Hospedagem</h1>
+              <main class="cards">
+                <section class="card contact">
+                  <div class="icon">
+                    <img src={Hospedagem1} alt="" className="hospedagem" />
+                  </div>
+                  <h4>
+                    <p>
+                      Hotel Lajedo
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h4>
+                  <span>
+                    Localizado na Rua Joaquim Teixeira de Moura, 1161, Apodi -
+                    RN, 59700-000•(84) 3333-3250
+                  </span>
+                </section>
+                <section class="card contact">
+                  <div class="icon">
+                    <img src={Hospedagem2} alt="Shop here." />
+                  </div>
+                  <h4>
+                    <p>
+                      Hotel Chapadão
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h4>
+                  <span>
+                    Localizado na Rua Joaquim Teixeira de Moura - Boa viagem,
+                    Apodi - RN, 59700-000•(84) 3333-3631
+                  </span>
+                </section>
+                <section class="card contact">
+                  <div class="icon">
+                    <img src={Hospedagem3} alt="About us." />
+                  </div>
+                  <h4>
+                    <p>
+                      Hotel Passeio
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h4>
+                  <span>
+                    Localizado na Rua João Epitácio Nogueira, 945 - Boa Viagem,
+                    Apodi - RN, 59700-000•(84) 3333-2031
+                  </span>
+                </section>
+              </main>
+
+              <h1 className="name">Gastronomia</h1>
+              <main class="cards">
+                <section class="card contact">
+                  <div class="icon">
+                    <img src={Gastronomia1} alt="Contact us." />
+                  </div>
+                  <h4>
+                    <p>
+                      Palheiro's Restaurante
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h4>
+                  <span>
+                    Localizado na Rua Joaquim Teixeira de Moura 487 Av Centro,
+                    Apodi, Rio Grande do Norte 59700-000 Brasil
+                  </span>
+                </section>
+                <section class="card contact">
+                  <div class="icon">
+                    <img src={Gastronomia2} alt="Shop here." />
+                  </div>
+                  <h4>
+                    <p>
+                      Sabor do Nordeste
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h4>
+                  <span>
+                    Localizado na Rua Tiradentes, 419, Apodi - RN, 59700-000
+                  </span>
+                </section>
+                <section class="card contact">
+                  <div class="icon">
+                    <img src={Gastronomia3} alt="About us." />
+                  </div>
+                  <h4>
+                    <p>
+                      Pizzaria Favorita
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                      <img
+                        src={IconEstrela}
+                        alt="Contact us."
+                        className="estrela"
+                      />
+                    </p>
+                  </h4>
+                  <span>
+                    Localizado na Rua marechal Floriano Peixoto 02, 59700-000
+                    Apodi, RN
+                  </span>
+                </section>
+              </main>
             </div>
           </S.ContainerLanding>
-          <S.ContainerAbout search={!search}>
-            <div>
-              <h1>Sobre</h1>
-            </div>
-            <div className="wrapper">
-              <div>
-                <span className="nota">4,0</span>
-                <img src={IconCircle} alt="circle" className="circle" />
-                <img src={IconCircle} alt="circle" className="circle" />
-                <img src={IconCircle} alt="circle" className="circle" />
-                <img src={IconCircle} alt="circle" className="circle" />
-                <img src={IconCircle} alt="circle" className="circle" />
-                <span className="avalia">16 avaliações</span>
-                <div>
-                  <span className="subtitle">#2 de 2 em Apodi</span>
-                </div>
-                <br></br>
-                <div className="sub">
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <span className="local">Localização</span>
-                </div>
-                <br></br>
-                <div className="sub">
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <img src={IconCircle} alt="circle" className="circle" />
-                  <span className="local">Atendimento</span>
-                </div>
-                <br></br>
-                <div className="text">
-                  Localizado em Apodi, o Hotel Chapadão disponibiliza um salão
-                  partilhado e um jardim. Com serviço de quartos, esta
-                  propriedade também providencia um terraço para banhos de sol.
-                </div>
-              </div>
-              <div>
-                <h4>Serviços do estabelecimento</h4>
-                <div className="services">
-                  <img
-                    src={IconEstaciona}
-                    alt="estacionamento"
-                    className="estaciona"
-                  />
-                  Estacionamento gratuito
-                  <div className="services">
-                    <img src={IconWifi} alt="wifi" className="wifi" />
-                    Internet sem fio gratuita e de alta velocidade (WiFi)
-                  </div>
-                </div>
-                <br></br>
-                <div className="services">
-                  <img src={IconWifi} alt="wifi" className="wifi" />
-                  Wi-fi
-                  <div className="services">
-                    <img src={IconNadar} alt="natacao" className="natacao" />
-                    Piscina
-                  </div>
-                </div>
-                <br></br>
-                <div className="services">
-                  <img src={IconCafe} alt="cafe da manha" className="cafe" />
-                  Café da manhã gratuito
-                  <div className="services">
-                    <img src={IconBar} alt="bar" className="bar" />
-                    Bar/lounge
-                  </div>
-                </div>
-                <br></br>
-                <div className="services">
-                  <img
-                    src={IconRestaurante}
-                    alt="restaurante"
-                    className="comida"
-                  />
-                  Restaurante
-                </div>
-                <br></br>
-                <h4>Comodidades nos quartos</h4>
-                <div className="services">
-                  <img src={IconNeve} alt="neve" className="neve" />
-                  Ar-condicionado
-                  <div className="services">
-                    <img src={IconRestaurante} alt="frigo" className="frigo" />
-                    Frigobar
-                  </div>
-                </div>
-                <br></br>
-                <h4>Tipos de quarto</h4>
-                <div className="services">
-                  <img src={IconCama} alt="cama" className="cama" />
-                  Quartos para família
-                </div>
-              </div>
-              <div></div>
-            </div>
-            <br></br>
-
-            <div className="wrapper">
-              <div>
-                <h1>Avaliações</h1>
-              </div>
-              <div className="avaliar">
-                <br></br>
-                <button className="acao">Faça uma avaliação</button>
-                <span className="separar">ou</span>
-                <button className="lapis" onClick={handleOpenModal}>
-                  Denunciar
-                </button>
-                <Modal
-                  isOpen={modalIsOpen}
-                  onRequestClose={handleCloseModal}
-                  style={customStyles}
-                >
-                  <h2>Denúncia:</h2>
-                  <h4>
-                    Digite o local de onde você quer enviar sua manifestação:
-                  </h4>
-                  <input placeholder="Escreva aqui"></input>
-                  <h4>Escreva abaixo sua insatisfação:</h4>
-                  <textarea
-                    rows="7"
-                    cols="50"
-                    placeholder="Escreva aqui"
-                  ></textarea>
-                  <br></br>
-                  <br></br>
-                  <button onClick={handleCloseModal}>Enviar</button>
-                </Modal>
-              </div>
-            </div>
-          </S.ContainerAbout>
-          {loading ? (
-            <S.ContainerLoading>
-              <img src={LoadingImg} alt="" />
-            </S.ContainerLoading>
-          ) : !!data.length ? (
-            React.Children.toArray(
-              data.map((item) => (
-                <S.Adverts reverse={!(item?.id % 2 === 0)} search={search}>
-                  <div>
-                    <h3>{item?.title}</h3>
-                    <p>{item?.description}</p>
-                    <Link to={item?.page} style={{ textDecoration: "none" }}>
-                      <button>Saiba mais</button>
-                    </Link>
-                  </div>
-                  <img src={item?.photo} alt="" />
-                </S.Adverts>
-              ))
-            )
-          ) : (
-            <S.ContainerEmpty>
-              <img src={LogoIcon} alt="" />
-              <h3>Nenhum ponto turistico foi encontrado!</h3>
-            </S.ContainerEmpty>
-          )}
         </S.ContainerAdverts>
       </S.ContainerPage>
       <S.Footer>
-        <img src={LogoIcon} alt="" /> Todos os direitos reservados ©
+        <div className="container-footer">
+          <div>
+            <img src={LogoNova} alt="" />
+          </div>
+          <div>
+            <strong>Guia Mandacaru</strong>
+            <p>Br 226 s/n,</p>
+            <p>Bairro São Geraldo, Pau dos ferros,</p>
+            <p>Rio Grande do Norte, Brasil</p>
+            <p>
+              <strong>Tel:</strong> +55 84 99999-9999
+            </p>
+            <p>
+              <strong>Email:</strong> mandacaru@ufersa.com
+            </p>
+          </div>
+          <div>
+            <strong>Cidades</strong>
+            <p>Portalegre</p>
+            <p>Martins</p>
+            <p>Apodi</p>
+            <p>Patu</p>
+            <p>Encanto</p>
+          </div>
+        </div>
+
+        <p>
+          Copyright© 2022. Guia turístico Mandacaru | Universidade Federal Rural
+          do Semi-Árido
+        </p>
       </S.Footer>
     </S.Container>
   );

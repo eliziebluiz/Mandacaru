@@ -394,8 +394,12 @@ export const Item = styled.div`
   color: #000000;
 
   .titles {
-    margin-left: 10rem;
+    margin-left: 3rem;
     margin-top: 5rem;
+  }
+
+  .titles:first-child {
+    text-align: center;
   }
 
   .description {

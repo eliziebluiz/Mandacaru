@@ -25,7 +25,7 @@ const ITEMSPONTOS = [
     id: 1,
     title: "Portalegre",
     description:
-      "Portalegre é um dos nossos paraísos serranos. A cidade é conhecida pelas belas paisagens, pousadas charmosas, ótima gastronomia, além da receptividade e hospitalidade do seu povo. Localiza-se na região do Alto Oeste potiguar, a 370 km de Natal",
+      "Portalegre é um dos nossos paraísos serranos. A cidade é conhecida pelas belas paisagens, pousadas charmosas, ótima gastronomia, além da receptividade e hospitalidade do seu povo. Localiza-se na região do Alto Oeste potiguar, a 370 km de Natal.",
     photo: ImgPortoAlegre,
     page: "/portalegre",
   },
@@ -167,6 +167,7 @@ const LandingPage = () => {
                     É uma área de conservação ambiental, com trechos de mata
                     intocada, e possui seis nascentes de água mineral pura e
                     cristalina.
+                    <h5>R. Dom Jaime Camara, 18, Portalegre - RN, Brasil</h5>
                   </span>
                 </div>
               </S.Item>
@@ -179,10 +180,13 @@ const LandingPage = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="titles">Pedra do Inferno</h3>
+                  <h3 className="titles">Mirante Três Torres</h3>
                   <span className="description">
-                    Localizado na rual AUmirante Cachorrinho, número 666, Bairro
-                    Infernal, ao lado do quiosque do Satanás.
+                    Formado por duas grandes rochas que proporcionam vistas
+                    espetaculares da região. Para chegar até o local, o turista
+                    faz um trekking de cerca de 3 km, apreciando a natureza
+                    intocada da região.
+                    <h5>Mirante Três Torres - Camping - Portalegre - RN</h5>
                   </span>
                 </div>
               </S.Item>
@@ -195,10 +199,14 @@ const LandingPage = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="titles">Pedra do Inferno</h3>
+                  <h3 className="titles">
+                    Mirante e Santuário São João Batista
+                  </h3>
                   <span className="description">
-                    Localizado na rual A Umirante Cachorrinho, número 666,
-                    Bairro Infernal, ao lado do quiosque do Satanás.
+                    O espaço é formado por duas capelas, mirante, banheiros e
+                    lanchonetes. Tem boa distribuição de lixeiras, iluminação,
+                    acesso para cadeirantes e internet.
+                    <h5>Mirante e Santuário São João Batista - Encanto - RN</h5>
                   </span>
                 </div>
               </S.Item>
@@ -253,6 +261,7 @@ const LandingPage = () => {
               <p>Martins</p>
               <p>Apodi</p>
               <p>Patu</p>
+              <p>Encanto</p>
             </div>
           </div>
 
