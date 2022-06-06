@@ -265,6 +265,7 @@ export const Adverts = styled.div`
   > div p {
     max-width: 30rem;
     line-height: 1.5rem;
+    text-align: justify;
   }
   > div button {
     display: flex;
