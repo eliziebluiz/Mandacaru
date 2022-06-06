@@ -31,17 +31,34 @@ export const ContainerPage = styled.div`
 
 export const Footer = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0.5rem 0rem;
   margin-top: 10rem;
-
-  background-color: #38b000;
-  color: #fff;
+  background-color: #ffff;
+  border: 1px solid #eceaea;
   font-weight: bold;
 
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 4rem;
+    > div > p {
+      font-weight: 400;
+    }
+  }
+
+  > p {
+    color: #000000;
+    font-weight: 400;
+    margin-top: 7rem;
+  }
+
   > img {
-    margin-top: -2rem;
     margin-right: 0.5rem;
   }
 `;
@@ -284,6 +301,7 @@ export const ContainerLanding = styled.div`
   //style cards
   main.cards {
     display: flex;
+    justify-content: space-between;
   }
 
   main.cards section.card {
@@ -303,8 +321,16 @@ export const ContainerLanding = styled.div`
   }
 
   main.cards section.card h3 {
-    font-size: 100%;
     margin: 16px 0;
+
+    .estrela {
+      width: 20px;
+      height: 20px;
+    }
+
+    .estrela:first-child {
+      margin-left: 40px;
+    }
   }
 
   main.cards section.card span {
