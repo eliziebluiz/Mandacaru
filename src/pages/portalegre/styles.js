@@ -223,8 +223,12 @@ export const Item = styled.div`
   color: #000000;
 
   .titles {
-    margin-left: 10rem;
+    margin-left: 3rem;
     margin-top: 5rem;
+  }
+
+  .titles:first-child {
+    text-align: center;
   }
 
   .description {
@@ -320,7 +324,7 @@ export const ContainerLanding = styled.div`
     width: 100%;
   }
 
-  main.cards section.card h3 {
+  main.cards section.card h4 {
     margin: 16px 0;
 
     .estrela {

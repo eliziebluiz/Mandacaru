@@ -15,9 +15,13 @@ export const Header = styled.div`
   align-items: center;
   width: 100%;
   padding: 1rem 0rem;
-  padding-left: 4.375rem;
+  padding-left: 1rem;
+  background-color: #ffff;
 
-  background-color: #38b000;
+  > h1 {
+    margin-top: 2rem;
+    margin-left: 3rem;
+  }
 `;
 
 export const ContainerPage = styled.div`
@@ -27,17 +31,34 @@ export const ContainerPage = styled.div`
 
 export const Footer = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0.5rem 0rem;
   margin-top: 10rem;
-
-  background-color: #38b000;
-  color: #fff;
+  background-color: #ffff;
+  border: 1px solid #eceaea;
   font-weight: bold;
 
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 4rem;
+    > div > p {
+      font-weight: 400;
+    }
+  }
+
+  > p {
+    color: #000000;
+    font-weight: 400;
+    margin-top: 7rem;
+  }
+
   > img {
-    margin-top: -2rem;
     margin-right: 0.5rem;
   }
 `;
@@ -94,8 +115,8 @@ export const ContainerAdverts = styled.div`
 `;
 
 export const Adverts = styled.div`
-  display: ${(props) => (props.search ? "flex" : "none")};
-  flex-direction: ${(props) => (props.reverse ? "row" : "row-reverse")};
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 
@@ -194,26 +215,49 @@ export const ContainerLoading = styled.div`
   }
 `;
 
+export const Item = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 300px;
+  width: 90%;
+  color: #000000;
+
+  .titles {
+    margin-left: 3rem;
+    margin-top: 5rem;
+  }
+
+  .titles:first-child {
+    text-align: center;
+  }
+
+  .description {
+    font-size: 15px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 20%;
+  }
+`;
+
 export const ContainerLanding = styled.div`
-  display: ${(props) => (props.search ? "flex" : "none")};
+  display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
 
-  padding: 0rem 3.25rem;
+  padding: 0rem 1rem;
   gap: 2rem;
 
   .description {
     font-size: 15px;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
   }
 
-  .casa {
-    background-color: green;
-    color: white;
-    width: 8rem;
-    padding: 0px 8px;
+  .name {
+    color: #457d2b;
   }
 
   .mirante {
@@ -227,14 +271,9 @@ export const ContainerLanding = styled.div`
     height: 6rem;
     display: flex;
     justify-content: center;
-
+    /* color: #ffff; */
     color: #38b000;
     border-left: solid #0071c2;
-  }
-
-  .links {
-    text-decoration: none;
-    color: #2e8fd5;
   }
 
   .iconLocaliza {
@@ -242,17 +281,91 @@ export const ContainerLanding = styled.div`
     height: 25px;
   }
 
+  .links {
+    text-decoration: none;
+    color: #2e8fd5;
+  }
+
+  //style carrousel
+  .rec-carousel-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 1px 1px black;
+  }
+
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+
+  .rec.rec-arrow {
+    background-color: #38b000;
+    color: #ffffff;
+  }
+  //
+
+  //style cards
+  main.cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  main.cards section.card:first-child {
+    margin-left: 0;
+  }
+
+  main.cards section.card img {
+    width: 100%;
+  }
+
+  main.cards section.card h4 {
+    margin: 16px 0;
+
+    .estrela {
+      width: 20px;
+      height: 20px;
+    }
+
+    .estrela:first-child {
+      margin-left: 40px;
+    }
+  }
+
+  main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+  }
+
+  main.cards section.card.contact {
+    box-shadow: 10px 20px 30px -30px #000000;
+  }
+
+  //
+
   @media (max-width: 1070px) {
     flex-direction: column;
     align-items: center;
     .title {
       border-left: none;
     }
+
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `;
 
 export const ContainerAbout = styled.div`
-  display: ${(props) => (props.search ? "grid" : "none")};
+  display: grid;
   .wrapper {
     display: grid;
     grid-template-columns: 1.5fr 2fr 1fr;

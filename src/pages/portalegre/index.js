@@ -93,9 +93,7 @@ const Portalegre = () => {
                       <img src={PontoTurismo3} alt="" />
                     </div>
                     <div>
-                      <h3 className="titles">
-                        Mirante natural Torres de Portalegre
-                      </h3>
+                      <h3 className="titles">Mirante Três Torres</h3>
                       <span className="description">
                         Formado por duas grandes rochas que proporcionam vistas
                         espetaculares da região. Para chegar até o local, o
@@ -114,7 +112,7 @@ const Portalegre = () => {
                   <div class="icon">
                     <img src={Hospedagem1} alt="" className="hospedagem" />
                   </div>
-                  <h3>
+                  <h4>
                     <p>
                       Recanto Alto da Serra
                       <img
@@ -143,7 +141,7 @@ const Portalegre = () => {
                         className="estrela"
                       />
                     </p>
-                  </h3>
+                  </h4>
                   <span>
                     Localizado na Rua dos Mirantes, 52, Centro, Portalegre - RN,
                     CEP 59810-000, Brasil
@@ -153,7 +151,7 @@ const Portalegre = () => {
                   <div class="icon">
                     <img src={Hospedagem2} alt="Shop here." />
                   </div>
-                  <h3>
+                  <h4>
                     <p>
                       Hotel Portal da Serra
                       <img
@@ -182,7 +180,7 @@ const Portalegre = () => {
                         className="estrela"
                       />
                     </p>
-                  </h3>
+                  </h4>
                   <span>
                     Localizado na Rua Antonio Brito de Freitas, s/n, Portalegre
                     - RN, 59810-000 - (84) 99945-6581
@@ -192,7 +190,7 @@ const Portalegre = () => {
                   <div class="icon">
                     <img src={Hospedagem3} alt="About us." />
                   </div>
-                  <h3>
+                  <h4>
                     <p>
                       Pousada Boa Vista
                       <img
@@ -221,7 +219,7 @@ const Portalegre = () => {
                         className="estrela"
                       />
                     </p>
-                  </h3>
+                  </h4>
                   <span>
                     Localizado no Terminal Turístico - Mirante Boa Vista,
                     Portalegre, Rio Grande do Norte 59810-000 Brasil
@@ -235,7 +233,7 @@ const Portalegre = () => {
                   <div class="icon">
                     <img src={Gastronomia1} alt="Contact us." />
                   </div>
-                  <h3>
+                  <h4>
                     <p>
                       Restaurante Donana
                       <img
@@ -264,7 +262,7 @@ const Portalegre = () => {
                         className="estrela"
                       />
                     </p>
-                  </h3>
+                  </h4>
                   <span>
                     Localizado na Av. Hipólito Fialho, 284 - Centro, Portalegre
                     - RN, 59810-000
@@ -274,7 +272,7 @@ const Portalegre = () => {
                   <div class="icon">
                     <img src={Gastronomia2} alt="Shop here." />
                   </div>
-                  <h3>
+                  <h4>
                     <p>
                       Restaurante Alto da Serra
                       <img
@@ -303,7 +301,7 @@ const Portalegre = () => {
                         className="estrela"
                       />
                     </p>
-                  </h3>
+                  </h4>
                   <span>
                     Localizado na Rua dos mirantes - RN-177, Portalegre - RN,
                     59810-000
@@ -313,7 +311,7 @@ const Portalegre = () => {
                   <div class="icon">
                     <img src={Gastronomia3} alt="About us." />
                   </div>
-                  <h3>
+                  <h4>
                     <p>
                       Resenharia Restaurante
                       <img
@@ -342,7 +340,7 @@ const Portalegre = () => {
                         className="estrela"
                       />
                     </p>
-                  </h3>
+                  </h4>
                   <span>
                     Localizado na Rua dos mirantes - RN-177, Portalegre - RN,
                     59810-000
