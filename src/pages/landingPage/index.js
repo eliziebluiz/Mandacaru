@@ -111,15 +111,12 @@ const LandingPage = () => {
             </S.ContainerLogo>
             <S.ContainerBoxSearch>
               <S.ContainerItems>
-                <h3>Bem Vindo ao Alto Oeste</h3>
-                <p>
-                  Aqui você encontra tudo e mais um pouco sobre essa linda
-                  região...
-                </p>
+                <h3>Venha conhecer o Oeste Potiguar</h3>
+                <p>Consulte o guia mandacaru para conhecer</p>
                 <S.ContainerSearch>
                   <input
                     type="text"
-                    placeholder="Busque aqui o seu próximo destino..."
+                    placeholder="Digite o nome da cidade que deseja conhecer..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
@@ -129,7 +126,7 @@ const LandingPage = () => {
             </S.ContainerBoxSearch>
           </S.Header>
           <S.TitleCities>
-            <p>Principais cidades do Alto Oeste</p>
+            <p>Algumas cidades do Oeste Potiguar</p>
           </S.TitleCities>
           <S.ContainerAdverts>
             {loading ? (
@@ -323,10 +320,7 @@ const LandingPage = () => {
               <p>Bairro São Geraldo, Pau dos ferros,</p>
               <p>Rio Grande do Norte, Brasil</p>
               <p>
-                <strong>Tel:</strong> +55 84 99999-9999
-              </p>
-              <p>
-                <strong>Email:</strong> mandacaru@ufersa.com
+                <strong>Email:</strong> mandacaruufersa@gmail.com
               </p>
             </div>
             <div>
