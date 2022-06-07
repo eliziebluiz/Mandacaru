@@ -270,7 +270,7 @@ export const Adverts = styled.div`
     display: flex;
     text-decoration: none;
     margin: 1rem auto;
-    background-color: #d9fd00;
+    background-color: #38b000;
     font-weight: bold;
 
     border-radius: 2rem;
