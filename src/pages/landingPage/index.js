@@ -67,6 +67,16 @@ const LandingPage = () => {
   const [search, setSearch] = useState("");
   const [data, setData] = useState(ITEMSPONTOS);
   const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = ({ target: { name, value } }) => {
+    setForm({ ...form, [name]: value });
+  };
 
   const removeAccents = (str) => {
     return str
@@ -238,6 +248,66 @@ const LandingPage = () => {
             </main>
           </div>
         </S.ContainerPage>
+        <S.Form
+          action="https://formsubmit.co/mandacaruufersa@gmail.com"
+          method="POST"
+        >
+          <h3>Contato</h3>
+          <p>
+            Envie-nos dúvidas, sugestões ou demais comentários. Responderemos em
+            breve por email.
+          </p>
+
+          <S.Field>
+            <strong>Nome Completo</strong>
+            <input
+              type="text"
+              name="name"
+              value={form?.name}
+              onChange={handleChange}
+            />
+          </S.Field>
+
+          <div className="container-info">
+            <S.Field>
+              <strong>Email</strong>
+              <input
+                type="text"
+                name="email"
+                value={form?.email}
+                onChange={handleChange}
+              />
+            </S.Field>
+            <S.Field>
+              <strong>Telefone</strong>
+              <input
+                type="number"
+                name="phone"
+                value={form?.phone}
+                onChange={handleChange}
+              />
+            </S.Field>
+          </div>
+
+          <S.Field height="10rem">
+            <strong>Mensagem</strong>
+            <textarea
+              type="text"
+              name="message"
+              value={form?.message}
+              onChange={handleChange}
+            />
+          </S.Field>
+          <input
+            type="hidden"
+            name="_next"
+            value="https://mandacaru.vercel.app/"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <S.ContainerButton>
+            <button type="submit">Enviar</button>
+          </S.ContainerButton>
+        </S.Form>
         <S.Footer>
           <div className="container-footer">
             <div>
@@ -266,8 +336,8 @@ const LandingPage = () => {
           </div>
 
           <p>
-            Copyright© 2022. Guia turístico Mandacaru | Universidade Federal
-            Rural do Semi-Árido
+            Copyright© 2022. Guia Mandacaru | Universidade Federal Rural do
+            Semi-Árido
           </p>
         </S.Footer>
       </S.Container>

@@ -413,3 +413,68 @@ export const Item = styled.div`
     max-width: 40rem;
   }
 `;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  background-color: #eceaea;
+  margin-top: 5rem;
+
+  padding: 2.5rem 5rem;
+
+  > h3 {
+    color: #38b000;
+    margin: 0;
+    font-size: 2rem;
+  }
+  > p {
+    color: #a6a7a5;
+  }
+
+  .container-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+`;
+
+export const Field = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0rem;
+  width: 100%;
+
+  > input,
+  textarea {
+    border: 1px solid #b0b0b0;
+    border-radius: 0.2rem;
+    min-height: ${(props) => props.height ?? "2rem"};
+    cursor: initial;
+    resize: none;
+  }
+
+  > strong {
+    margin-bottom: 0.5rem;
+  }
+`;
+
+export const ContainerButton = styled.div`
+  width: 100%;
+  justify-content: center;
+  display: flex;
+
+  > button {
+    width: 100%;
+    max-width: 15rem;
+    background-color: #38b000;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+`;
