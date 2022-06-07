@@ -265,6 +265,7 @@ const LandingPage = () => {
               name="name"
               value={form?.name}
               onChange={handleChange}
+              required
             />
           </S.Field>
 
@@ -272,10 +273,11 @@ const LandingPage = () => {
             <S.Field>
               <strong>Email</strong>
               <input
-                type="text"
+                type="email"
                 name="email"
                 value={form?.email}
                 onChange={handleChange}
+                required
               />
             </S.Field>
             <S.Field>
@@ -285,6 +287,7 @@ const LandingPage = () => {
                 name="phone"
                 value={form?.phone}
                 onChange={handleChange}
+                required
               />
             </S.Field>
           </div>
@@ -296,6 +299,7 @@ const LandingPage = () => {
               name="message"
               value={form?.message}
               onChange={handleChange}
+              required
             />
           </S.Field>
           <input
