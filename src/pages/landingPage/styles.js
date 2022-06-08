@@ -272,6 +272,7 @@ export const Adverts = styled.div`
     text-decoration: none;
     margin: 1rem auto;
     background-color: #38b000;
+    color: #ffffff;
     font-weight: bold;
 
     border-radius: 2rem;

@@ -30,14 +30,16 @@ const Martins = () => {
           <S.ContainerLanding>
             <div>
               <h1 className="name">Sobre a cidade</h1>
-              <h5 className="description">
+              <span className="description">
                 Martins é um município brasileiro localizado no interior do
                 estado do Rio Grande do Norte, a uma distância de 370
                 quilômetros da capital estadual, Natal. Com uma área territorial
                 de 169 quilômetros quadrados (km²), sua população no censo de
                 2010 era de 8 218 habitantes, de acordo com o Instituto
                 Brasileiro de Geografia e Estatística (IBGE).
-                <h5 className="description">
+                <br></br>
+                <br></br>
+                <span className="description">
                   Um dos principais destinos turísticos do interior potiguar,
                   Martins se destaca no turismo de aventura, abrigando a segunda
                   maior caverna de mármore do país, a Casa de Pedra, com 100
@@ -45,8 +47,8 @@ const Martins = () => {
                   festival gastronômico, a festa da padroeira Nossa Senhora da
                   Conceição, realizada a partir do final de dezembro,
                   estendendo-se até o início de janeiro.
-                </h5>
-              </h5>
+                </span>
+              </span>
               <h1 className="name">Pontos turísticos da cidade</h1>
               <div className="carousel-wrapper">
                 <Carousel itemsToShow={1} pagination={false}>
@@ -105,7 +107,13 @@ const Martins = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem1} alt="" className="hospedagem" />
+                    <a
+                      href="https://www.instagram.com/hotelchalelagoadosingas/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem1} alt="" className="hospedagem" />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -144,7 +152,13 @@ const Martins = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/hotelpdserra/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -182,7 +196,13 @@ const Martins = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem3} alt="About us." />
+                    <a
+                      href="https://www.instagram.com/ranchodaserra/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -225,11 +245,17 @@ const Martins = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia1} alt="Contact us." />
+                    <a
+                      href="https://www.instagram.com/mirantedocanto_/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia1} alt="Contact us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
-                      Mirante Varandas Da Serra
+                      Mirante do Canto
                       <img
                         src={IconEstrela}
                         alt="Contact us."
@@ -264,7 +290,13 @@ const Martins = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/aogostodochef_/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -303,7 +335,13 @@ const Martins = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia3} alt="About us." />
+                    <a
+                      href="https://www.tripadvisor.com.br/Restaurant_Review-g2577838-d10667029-Reviews-Restaurante_E_Petiscaria_Sabor_Da_Serra-Martins_State_of_Rio_Grande_do_Norte.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>

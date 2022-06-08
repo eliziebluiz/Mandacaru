@@ -29,19 +29,21 @@ const Patu = () => {
           <S.ContainerLanding>
             <div>
               <h1 className="name">Sobre a cidade</h1>
-              <h5 className="description">
+              <span className="description">
                 Cidade que se formou no pé de uma serra, denominada Serra de
                 Patu, está localizada na microrregião serrana, a uma distância
                 de 310 km da capital do estado, Natal, com uma área de 303,5 km²
                 e uma população de aproximadamente 12 mil habitantes.
-                <h5 className="description">
+                <br></br>
+                <br></br>
+                <span className="description">
                   Patu se destaca por seu grande potencial turístico em vários
                   segmentos: religioso, cultural, ecológico e também o turismo
                   de aventura. Unindo-se a tudo isso, podemos destacar o seu
                   povo vibrante e hospitaleiro, a sua típica culinária e o seu
                   rico artesanato que reforçam a base do potencial turístico.
-                </h5>
-              </h5>
+                </span>
+              </span>
               <h1 className="name">Pontos turísticos da cidade</h1>
               <div className="carousel-wrapper">
                 <Carousel itemsToShow={1} pagination={false}>
@@ -103,7 +105,13 @@ const Patu = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem1} alt="" className="hospedagem" />
+                    <a
+                      href="https://www.ferias.tur.br/empresa/34507/plazahotel/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem1} alt="" className="hospedagem" />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -141,7 +149,13 @@ const Patu = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem2} alt="Shop here." />
+                    <a
+                      href="https://www.tripadvisor.com.br/Hotel_Review-g3167141-d16759000-Reviews-Pousada_Cidade_do_Sol-Patu_State_of_Rio_Grande_do_Norte.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -184,7 +198,13 @@ const Patu = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia1} alt="Contact us." />
+                    <a
+                      href="https://www.instagram.com/cafejesuino/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia1} alt="Contact us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -222,7 +242,13 @@ const Patu = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/churrascariavaigordo/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -260,7 +286,13 @@ const Patu = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia3} alt="About us." />
+                    <a
+                      href="https://www.tripadvisor.com.br/Restaurant_Review-g3167141-d15615311-Reviews-Bistro-Patu_State_of_Rio_Grande_do_Norte.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
