@@ -197,7 +197,7 @@ export const ContainerItems = styled.div`
   }
 
   > h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0rem;
     margin-bottom: 0.875rem;
   }

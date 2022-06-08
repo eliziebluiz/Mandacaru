@@ -112,7 +112,7 @@ const LandingPage = () => {
             <S.ContainerBoxSearch>
               <S.ContainerItems>
                 <h3>Venha conhecer o Oeste Potiguar</h3>
-                <p>Consulte o guia mandacaru para conhecer</p>
+                <p>Consulte o Guia Mandacaru para conhecer essa linda região</p>
                 <S.ContainerSearch>
                   <input
                     type="text"
@@ -226,21 +226,56 @@ const LandingPage = () => {
             <main class="cards">
               <section class="card contact">
                 <div class="icon">
-                  <img src={cuscuz_potiguar} alt="Contact us." />
+                  <a
+                    href="https://www.tudogostoso.com.br/receita/134890-cuscuz-simples.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={cuscuz_potiguar} alt="Contact us." />
+                  </a>
                 </div>
                 <h3>Cuscuz Potiguar</h3>
+                <span>
+                  O Cuscuz é uma ótima opção para substituir o pão com manteiga
+                  em suas refeições. Pode ser feito com ovo cozido, com leite de
+                  vaca ou leite de coco, manteiga, requeijão de corte, carne
+                  seca, carne de sol e afins.
+                </span>
               </section>
               <section class="card contact">
                 <div class="icon">
-                  <img src={buchada} alt="Shop here." />
+                  <a
+                    href="https://www.tudogostoso.com.br/receita/129382-buchada.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={buchada} alt="Shop here." />
+                  </a>
                 </div>
                 <h3>Buchada</h3>
+                <span>
+                  Buchada de bode, ou simplesmente buchada, é um prato típico da
+                  região Nordeste do Brasil. A iguaria tem origem no maranho, da
+                  culinária portuguesa tradicional.
+                </span>
               </section>
               <section class="card contact">
                 <div class="icon">
-                  <img src={baiao} alt="About us." />
+                  <a
+                    href="https://www.tudogostoso.com.br/receita/1154-baiao-de-dois.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={baiao} alt="About us." />
+                  </a>
                 </div>
-                <h3>Baião</h3>
+                <h3>Baião de Dois</h3>
+                <span>
+                  O baião de dois é um prato típico das regiões Norte e Nordeste
+                  do Brasil, sendo que há diversas variações entre os
+                  ingredientes utilizados, mas a base é sempre de arroz e
+                  feijão.
+                </span>
               </section>
             </main>
           </div>
