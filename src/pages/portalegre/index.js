@@ -30,16 +30,20 @@ const Portalegre = () => {
           <S.ContainerLanding>
             <div>
               <h1 className="name">Sobre a cidade</h1>
-              <h5 className="description">
+              <span className="description">
                 Portalegre é um município brasileiro no Alto Oeste do estado do
                 Rio Grande do Norte, localizado no Polo Serrano. Área
                 territorial de 110 km².
-                <h5 className="description">
+                <br></br>
+                <br></br>
+                <span className="description">
                   A história da região onde Portalegre situa-se, mescla a
                   influência entre os nativos das terras, os índios Paiacu,
                   Tarairiu, portugueses e a expansão da carne do charque.
-                </h5>
-                <h5 className="description">
+                </span>
+                <br></br>
+                <br></br>
+                <span className="description">
                   No final do Século XVII foi registrado o surgimento de
                   Portalegre através do avanço de currais de gado, durante o
                   ciclo econômico da carne do charque, que se estendiam até a
@@ -49,8 +53,8 @@ const Portalegre = () => {
                   para a serra. A terra foi demarcada com uma tora de madeira
                   (dormentes). Daí o primeiro nome da vila foi considerado Serra
                   dos Dormentes.
-                </h5>
-              </h5>
+                </span>
+              </span>
               <h1 className="name">Pontos turísticos da cidade</h1>
               <div className="carousel-wrapper">
                 <Carousel itemsToShow={1} pagination={false}>
@@ -110,7 +114,13 @@ const Portalegre = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem1} alt="" className="hospedagem" />
+                    <a
+                      href="https://www.instagram.com/recantoaltodaserra_/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem1} alt="" className="hospedagem" />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -149,7 +159,13 @@ const Portalegre = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/hotelpdserra/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -188,7 +204,13 @@ const Portalegre = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem3} alt="About us." />
+                    <a
+                      href="https://www.instagram.com/pousadaboavista02/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -231,7 +253,13 @@ const Portalegre = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia1} alt="Contact us." />
+                    <a
+                      href="https://www.instagram.com/donana__restaurante/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia1} alt="Contact us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -270,7 +298,13 @@ const Portalegre = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/recantoaltodaserra_/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -309,7 +343,13 @@ const Portalegre = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia3} alt="About us." />
+                    <a
+                      href="https://www.instagram.com/resenharia_restaurante/?hl=pt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>

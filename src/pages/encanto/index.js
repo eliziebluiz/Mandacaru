@@ -25,19 +25,21 @@ const Encanto = () => {
           <S.ContainerLanding>
             <div>
               <h1 className="name">Sobre a cidade</h1>
-              <h5 className="description">
+              <span className="description">
                 Encanto é um município brasileiro no interior do estado do Rio
                 Grande do Norte. Ele se localiza a oeste da capital do estado e
                 ocupa uma área de aproximadamente 126 km².
-                <h5 className="description">
+                <br></br>
+                <br></br>
+                <span className="description">
                   Antes de ser elevado à categoria de município, era um distrito
                   pertencente ao município de Pau dos Ferros, com o nome de
                   Joaquim Correia. Atualmente, Encanto é formado apenas pelo
                   distrito sede e abriga uma das maiores obras de engenharia
                   civil do Rio Grande do Norte, o Mirante e Santuário de São
                   João Batista, no topo do serrote homônimo.
-                </h5>
-              </h5>
+                </span>
+              </span>
               <h1 className="name">Pontos turísticos da cidade</h1>
               <div className="carousel-wrapper">
                 <Carousel itemsToShow={1} pagination={false}>
@@ -50,11 +52,11 @@ const Encanto = () => {
                         Mirante e Santuário São João Batista
                       </h3>
                       <span className="description">
-                        Inaugurado em 20 de junho de 2015, é uma das maiores
-                        obras de engenharia civil do Rio Grande do Norte.
+                        O espaço é formado por duas capelas, mirante, banheiros
+                        e lanchonetes. Tem boa distribuição de lixeiras,
+                        iluminação, acesso para cadeirantes e internet.
                         <h5>
-                          Localizado no serrote homônimo e formado pela capela
-                          de São João Batista e espaços culturais e de lazer.
+                          Mirante e Santuário São João Batista - Encanto - RN
                         </h5>
                       </span>
                     </div>
@@ -66,11 +68,17 @@ const Encanto = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia1} alt="Contact us." />
+                    <a
+                      href="https://www.instagram.com/marmitasfit_emi/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia1} alt="Contact us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
-                      Diogo Bar e Ribeirinhos
+                      Marmitas fitnes Emiliana
                       <img
                         src={IconEstrela}
                         alt="Contact us."
@@ -102,7 +110,13 @@ const Encanto = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/restaurantesabordosertao18/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -140,7 +154,13 @@ const Encanto = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia3} alt="About us." />
+                    <a
+                      href="https://www.solutudo.com.br/empresas/rn/encanto/restaurantes/ki-delicia-10642894"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>

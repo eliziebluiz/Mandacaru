@@ -30,14 +30,16 @@ const Apodi = () => {
           <S.ContainerLanding>
             <div>
               <h1 className="name">Sobre a cidade</h1>
-              <h5 className="description">
+              <span className="description">
                 Apodi é um município brasileiro do estado do Rio Grande do
                 Norte. De acordo com a estimativa realizada pelo IBGE (Instituto
                 Brasileiro de Geografia e Estatística) em 2017, sua população é
                 de 36.323 habitantes. Área territorial de 1 602,477 km². Apodi
                 foi emancipado de Portalegre através da Resolução do Conselho
                 Geral da Província do Rio Grande em 11 de abril de 1833.
-                <h5 className="description">
+                <br></br>
+                <br></br>
+                <span className="description">
                   Apodi possui todo o seu território inserido na bacia
                   hidrográfica do Rio Apodi-Mossoró, sendo cortado por esse rio
                   e um de seus afluentes, o Rio Umari. O principal reservatório
@@ -45,8 +47,8 @@ const Apodi = () => {
                   Governador Aluízio Alves, com capacidade para 599 712 000 de
                   metros cúbicos de água (m³) e o segundo maior do Rio Grande do
                   Norte, depois da Barragem Armando Ribeiro Gonçalves, em Assu.
-                </h5>
-              </h5>
+                </span>
+              </span>
               <h1 className="name">Pontos turísticos da cidade</h1>
               <div className="carousel-wrapper">
                 <Carousel itemsToShow={1} pagination={false}>
@@ -107,7 +109,13 @@ const Apodi = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem1} alt="" className="hospedagem" />
+                    <a
+                      href="https://www.instagram.com/hotellajedoapodi/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem1} alt="" className="hospedagem" />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -146,7 +154,13 @@ const Apodi = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem2} alt="Shop here." />
+                    <a
+                      href="https://www.instagram.com/hotelchapadao/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -185,7 +199,13 @@ const Apodi = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Hospedagem3} alt="About us." />
+                    <a
+                      href="https://www.tripadvisor.com.br/LocationPhotoDirectLink-g2347342-d2661296-i41150003-Passeio_Hotel-Apodi_State_of_Rio_Grande_do_Norte.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Hospedagem3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -228,7 +248,13 @@ const Apodi = () => {
               <main class="cards">
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia1} alt="Contact us." />
+                    <a
+                      href="https://www.instagram.com/palheirosrestaurante/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia1} alt="Contact us." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -267,7 +293,13 @@ const Apodi = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia2} alt="Shop here." />
+                    <a
+                      href="https://restaurantguru.com.br/Churrascaria-Sabor-Do-Nordeste-Apodi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia2} alt="Shop here." />
+                    </a>
                   </div>
                   <h4>
                     <p>
@@ -305,7 +337,13 @@ const Apodi = () => {
                 </section>
                 <section class="card contact">
                   <div class="icon">
-                    <img src={Gastronomia3} alt="About us." />
+                    <a
+                      href="https://www.instagram.com/_pizzariafavorita/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Gastronomia3} alt="About us." />
+                    </a>
                   </div>
                   <h4>
                     <p>

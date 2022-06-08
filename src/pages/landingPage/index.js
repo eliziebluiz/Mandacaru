@@ -33,7 +33,7 @@ const ITEMSPONTOS = [
     id: 2,
     title: "Martins",
     description:
-      "Martins Rio Grande do Norte é uma das principais cidades do interior do Estado Potiguar,  e aqui a falta de praias não deixa nada a desejar  aos visitantes, pois o município é  reflexo de atrativos naturais que incluem cachoeiras,sítio arqueológicos e mata preservada.Quer saber o que mais você encontra por aqui?",
+      "Martins Rio Grande do Norte é uma das principais cidades do interior do Estado Potiguar, e aqui a falta de praias não deixa nada a desejar aos visitantes, pois o município é reflexo de atrativos naturais que incluem cachoeiras, sítio arqueológicos e mata preservada. Quer saber o que mais você encontra por aqui?",
     photo: ImgMartins,
     page: "/martins",
   },
