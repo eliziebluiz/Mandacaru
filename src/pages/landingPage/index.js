@@ -9,7 +9,7 @@ import Search from "../../assets/search.svg";
 import LoadingImg from "../../assets/loading.gif";
 import ImgPortoAlegre from "../../assets/portalegre.png";
 import ImgMartins from "../../assets/martins.png";
-import ImgApodi from "../../assets/apodi.png";
+import ImgApodi from "../../assets/apodi_entrada_1.png";
 import ImgPatu from "../../assets/patu.png";
 import ImgEncanto from "../../assets/encanto.svg";
 import Portalegre_Bica from "../../assets/portalegre_bica.svg";
